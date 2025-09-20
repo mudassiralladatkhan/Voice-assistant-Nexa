@@ -82,13 +82,9 @@ export const SystemDiagnostics: React.FC = () => {
                     <p className={`text-base font-mono font-bold ${item.color}`}>{item.value}</p>
                 </div>
                 <div className={`relative flex items-center justify-center w-10 h-10 ${item.color}`}>
-                    <motion.div 
-                        className="absolute inset-0" 
-                        animate={{ rotate: 360 }} 
-                        transition={{ duration: 8 + index * 2, repeat: Infinity, ease: 'linear' }}
-                    >
+                    <div className="absolute inset-0 flex items-center justify-center">
                         <item.icon size={22} />
-                    </motion.div>
+                    </div>
                     <motion.div 
                         className={`absolute inset-0 border rounded-full ${item.color.replace('text-', 'border-')}/30`}
                         animate={{ scale: [1, 1.5, 1], opacity: [0, 0.6, 0] }}

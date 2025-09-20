@@ -79,12 +79,9 @@ export const HolographicDisplay: React.FC<HolographicDisplayProps> = ({
                       transition={{ delay: index * 0.1 }}
                       className="flex items-center gap-3"
                     >
-                      <motion.div
-                        animate={{ rotate: [0, 360] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                      >
+                      <div>
                         <item.icon size={16} className={`text-${item.color}`} />
-                      </motion.div>
+                      </div>
                       <div className="flex-1">
                         <div className="flex justify-between items-center mb-1">
                           <span className="text-xs text-gray-300">{item.label}</span>

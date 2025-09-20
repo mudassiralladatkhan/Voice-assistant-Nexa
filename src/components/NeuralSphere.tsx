@@ -114,7 +114,6 @@ export const NeuralSphere: React.FC<NeuralSphereProps> = ({
                 animate={{
                   scale: [0, 1.5, 0],
                   opacity: [0, 1, 0],
-                  rotate: [0, 360],
                 }}
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{
@@ -248,7 +247,6 @@ export const NeuralSphere: React.FC<NeuralSphereProps> = ({
           animate={{
             opacity: state === 'listening' ? [0.4, 0.9, 0.4] : state === 'processing' ? [0.3, 0.8, 0.3] : 0.6,
             scale: state === 'listening' ? [0.95, 1.05, 0.95] : state === 'processing' ? [0.9, 1.1, 0.9] : 1,
-            rotate: state === 'processing' ? [0, 360] : 0,
           }}
           transition={{ 
             duration: state === 'processing' ? 6 : 3, 
@@ -273,7 +271,6 @@ export const NeuralSphere: React.FC<NeuralSphereProps> = ({
                   animate={{
                     scale: [0, 1.2, 0],
                     opacity: [0, 0.8, 0],
-                    rotate: [0, 180, 360],
                   }}
                   exit={{ scale: 0, opacity: 0 }}
                   transition={{
@@ -295,10 +292,9 @@ export const NeuralSphere: React.FC<NeuralSphereProps> = ({
           className="relative z-10 flex items-center justify-center"
           animate={{
             scale: state === 'listening' ? [1, 1.1, 1] : state === 'processing' ? [1, 1.2, 1] : 1,
-            rotate: state === 'processing' ? [0, 360] : 0,
           }}
           transition={{
-            duration: state === 'processing' ? 4 : 2.5,
+            duration: 2.5,
             repeat: ['listening', 'processing'].includes(state) ? Infinity : 0,
             ease: 'easeInOut',
           }}
@@ -354,13 +350,11 @@ export const NeuralSphere: React.FC<NeuralSphereProps> = ({
 
           {/* Processing overlay effects */}
           {state === 'processing' && (
-            <motion.div
+            <div
               className="absolute inset-0 flex items-center justify-center"
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
             >
               <Zap size={32} className="text-nexa-pink opacity-60" />
-            </motion.div>
+            </div>
           )}
         </motion.div>
 

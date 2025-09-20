@@ -15,7 +15,7 @@ const NexaLogo = () => (
   >
     <motion.div
       className="w-12 h-12 relative"
-      whileHover={{ scale: 1.2, rotate: 360 }}
+      whileHover={{ scale: 1.2 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       <motion.svg viewBox="0 0 120 120" className="w-full h-full">

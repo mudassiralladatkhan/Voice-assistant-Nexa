@@ -56,12 +56,10 @@ export const CommandDisplay: React.FC<CommandDisplayProps> = ({
               transition={{ delay: 0.2 }}
             >
               <motion.div
-                animate={{ 
-                  rotate: [0, 360],
+                animate={{
                   scale: [1, 1.2, 1]
                 }}
-                transition={{ 
-                  rotate: { duration: 8, repeat: Infinity, ease: 'linear' },
+                transition={{
                   scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
                 }}
               >
@@ -137,12 +135,10 @@ export const CommandDisplay: React.FC<CommandDisplayProps> = ({
                   animate={{ opacity: 1, x: 0 }}
                 >
                   <motion.div
-                    animate={{ 
-                      rotate: [0, 360],
+                    animate={{
                       scale: [1, 1.3, 1]
                     }}
-                    transition={{ 
-                      rotate: { duration: 2, repeat: Infinity, ease: 'linear' },
+                    transition={{
                       scale: { duration: 1.5, repeat: Infinity, ease: 'easeInOut' }
                     }}
                   >
